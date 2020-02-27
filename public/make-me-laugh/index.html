@@ -8,7 +8,7 @@
     </head>
     <body>
         <div class='centered-container'>
-            <form>
+            <form id='joke-form' onsubmit="handleAskServerForJoke(event)">
                 <label>
                     Gimme a
                     <select id="type" name="type" class='joke-select'>
@@ -19,8 +19,9 @@
                     </select>
                     Joke,
                 </label>
-                <button type="submit">NOW!!</button>
+                <button id='submit-button' type="submit">NOW!!</button>
             </form>
+            <h4 id='jokeh4'></h4>
         </div>
         <script src="scripts.js"></script>
     </body>

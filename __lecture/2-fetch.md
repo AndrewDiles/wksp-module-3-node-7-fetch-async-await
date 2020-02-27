@@ -2,6 +2,8 @@
 
 ---
 
+FRONT END
+
 - `fetch()` is a JavaScript (but not in NodeJS) Promise-based function.
 - It's mainly used to
     - `GET` from somewhere
@@ -31,7 +33,7 @@ fetch('<URL>')
 ### `POST
 
 ```js
-fetch('<URL>'{
+fetch('<URL>', {
         method: 'POST', // (optional) for `GET`
         mode: '',       // (optional) no-cors, *cors, same-origin
         cache: '',      // (optional) no-cache, reload, force-cache, only-if-cached
