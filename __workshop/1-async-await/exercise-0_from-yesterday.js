@@ -14,12 +14,30 @@ const compareToTen = (num) => {
     return myPromise;
 }
 
+// hahaha
 const myFunc = async (num) => {
-    // add code here
+    try {
+        let result = await compareToTen(num);
+        return result;
+    } catch(reject) {console.log(reject); return(reject);}
 }
+
+// const myFunc = async (num) => {
+//     const test = new Promise (x) {
+//         if (x>10) return x;
+//         else 
+//     }
+//     try {
+//         await test(num);
+//     } catch (err) { console.log(err) }
+// }
+
 
 myFunc(15);
 myFunc(8);
+
+
+
 
     
 // Exercise 0.1
@@ -28,6 +46,8 @@ myFunc(8);
 // The first function, makeAllCaps(), will take in an array of words and capitalize them,
 // and then the second function, sortWords(), will sort the words in alphabetical order.
 // If the array contains anything but strings, it should throw an error.
+
+
 
 const makeAllCaps = (array) => {
     return new Promise((resolve, reject) => {
@@ -52,7 +72,12 @@ const sortWords = (array) => {
 } 
 
 const textTransform = async (array) => {
-    // add code here
+    try {
+    let result = await makeAllCaps(array);
+    result = await sortWords(result);
+    
+    return result;
+    } catch(reject) {console.log(reject); return(reject);}
 }
 
 textTransform(['cucumber', 'tomatos', 'avocado']);
